@@ -1,0 +1,19 @@
+{
+    "name": "htlw3r/cookies_for_future",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Htlw3r\\CookiesForFuture\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bierkenig",
+            "email": "92359399+Bierkenig@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "^3.3",
+        "typo3fluid/fluid": "^2.7"
+    }
+}
