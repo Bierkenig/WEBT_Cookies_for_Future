@@ -1,0 +1,83 @@
+html {
+    background: url("resources/Chinese_black_dragon.svg");
+    background-size: 10vh;
+    text-align: center;
+    color: gold;
+    font-family: 'chineseDragon', sans-serif;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+
+@font-face {
+    font-family: 'chineseDragon';
+    src: url('resources/ChineseDragon.ttf');
+}
+
+#mainHeading {
+    font-weight: normal;
+    font-size: 10vh;
+}
+
+#cookie {
+    animation-name: offCookie;
+    animation-duration: 0.5s;
+    height: 40vh;
+}
+
+#cookie:hover {
+    animation-name: onCookie;
+    animation-duration: 0.5s;
+    transform: scale(1.1)
+}
+
+@keyframes onCookie {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.1)
+    }
+}
+
+@keyframes offCookie {
+    from {
+        transform: scale(1.1)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+#clickHint {
+    font-size: x-large;
+}
+
+#fortuneQuoteBox {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+#fortuneQuote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Calibri, sans-serif;
+    color: rgba(0,0,0,0);
+    background-color: white;
+    width: 0;
+    height: 2em;
+    padding: 0.5em;
+    border-radius: 5px;
+
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    -o-user-select: text;
+}
