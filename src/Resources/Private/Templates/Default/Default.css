@@ -81,3 +81,10 @@ html {
     user-select: text;
     -o-user-select: text;
 }
+
+@media (max-width: 400px) {
+    #cookie {
+        height: auto;
+        width: 90%;
+    }
+}
