@@ -51,7 +51,7 @@ html {
     }
 }
 
-#clickHint {
+#clickHint, #cookieLimitHint {
     font-size: x-large;
 }
 

@@ -6,10 +6,12 @@ function clickCookie(){
     let instance = window.setInterval(function() {
         document.getElementById('cookie').style.opacity = opacity;
         document.getElementById('clickHint').style.opacity = opacity;
+        document.getElementById('cookiesLeftHint').style.opacity = opacity;
         opacity -= increment;
         if(opacity <= 0){
             document.getElementById('cookie').style.display = 'none';
             document.getElementById('clickHint').style.display = 'none';
+            document.getElementById('cookiesLeftHint').style.display = 'none';
             showFortuneQuote();
             window.clearInterval(instance);
         }
