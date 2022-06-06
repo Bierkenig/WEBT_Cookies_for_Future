@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 04. Jun 2022 um 20:41
+-- Erstellungszeit: 06. Jun 2022 um 19:47
 -- Server-Version: 10.4.24-MariaDB
 -- PHP-Version: 8.1.6
 
@@ -24,6 +24,18 @@ SET time_zone = "+00:00";
 DROP DATABASE IF EXISTS fortunecookies;
 CREATE DATABASE IF NOT EXISTS fortunecookies;
 USE fortunecookies;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `access_records`
+--
+
+CREATE TABLE `access_records` (
+  `pk_entry_id` int(11) NOT NULL,
+  `timestamp` datetime DEFAULT NULL,
+  `ip` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -87,6 +99,12 @@ INSERT INTO `quote` (`pk_quote_id`, `text`) VALUES
 --
 
 --
+-- Indizes für die Tabelle `access_records`
+--
+ALTER TABLE `access_records`
+  ADD PRIMARY KEY (`pk_entry_id`);
+
+--
 -- Indizes für die Tabelle `quote`
 --
 ALTER TABLE `quote`
@@ -95,6 +113,12 @@ ALTER TABLE `quote`
 --
 -- AUTO_INCREMENT für exportierte Tabellen
 --
+
+--
+-- AUTO_INCREMENT für Tabelle `access_records`
+--
+ALTER TABLE `access_records`
+  MODIFY `pk_entry_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT für Tabelle `quote`
