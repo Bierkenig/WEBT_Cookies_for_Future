@@ -1,6 +1,7 @@
 <?php
 
 use Doctrine\DBAL\DriverManager;
+use TYPO3Fluid\Fluid\View\TemplateView;
 
 require_once '../vendor/autoload.php';
 
@@ -34,4 +35,9 @@ function getRandomQuote()
     }
 }
 
-echo getRandomQuote();
+$view = new TemplateView();
+$paths = $view->getTemplatePaths();
+$paths->setTemplateRootPaths([__DIR__ . '/Resources/Private/Templates/']);
+$paths->setLayoutRootPaths([__DIR__ . '/Resources/Private/Layouts/']);
+$view->assign('quote', getRandomQuote());
+echo $view->render('Default');

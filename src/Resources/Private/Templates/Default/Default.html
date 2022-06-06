@@ -1,0 +1,17 @@
+<f:layout name="Default" />
+
+<f:section name="HeaderAssets">
+    <meta charset="UTF-8">
+    <title>Fortune Cookies</title>
+    <link rel="stylesheet" href="Resources/Private/Templates/Default/Default.css">
+</f:section>
+
+<f:section name="Main">
+    <script src="Resources/Private/Templates/Default/Default.js" defer></script>
+    <h1 id="mainHeading">FORTUNE COOKIES</h1>
+    <img src="Resources/Private/Templates/Default/resources/fortune-cookie.svg" alt="fortune cookie" id="cookie" onclick="clickCookie()">
+    <div id="clickHint">CLICK TO OPEN</div>
+    <div id="fortuneQuoteBox">
+        <div id="fortuneQuote">{quote}</div>
+    </div>
+</f:section>

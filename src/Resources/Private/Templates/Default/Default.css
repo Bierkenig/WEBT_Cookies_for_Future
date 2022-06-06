@@ -13,7 +13,7 @@ html {
 
 @font-face {
     font-family: 'chineseDragon';
-    src: url('resources/ChineseDragon.ttf');
+    src: url('resources/ChineseDragon.ttf') format('truetype');
 }
 
 #mainHeading {

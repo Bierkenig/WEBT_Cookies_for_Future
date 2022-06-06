@@ -10,13 +10,13 @@ function clickCookie(){
         if(opacity <= 0){
             document.getElementById('cookie').style.display = 'none';
             document.getElementById('clickHint').style.display = 'none';
-            showFortuneQuote('Courage is not simply one of the virtues, but the form of every virtue at the testing point.');
+            showFortuneQuote();
             window.clearInterval(instance);
         }
     },5)
 }
 
-function showFortuneQuote(text) {
+function showFortuneQuote() {
     document.getElementById('fortuneQuoteBox').style.display = 'flex';
     let increment = 0.1;
     let width = 0;
@@ -24,7 +24,6 @@ function showFortuneQuote(text) {
         document.getElementById('fortuneQuote').style.width = width + 'em';
         width = width + increment;
         if(width > 20){
-            document.getElementById('fortuneQuote').textContent = text;
             let colorIncrement = 0.01;
             let colorOpacity = 0;
             let colorInstance = window.setInterval(function() {
