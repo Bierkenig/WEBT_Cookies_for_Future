@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 06. Jun 2022 um 21:09
+-- Erstellungszeit: 06. Jun 2022 um 21:23
 -- Server-Version: 10.4.24-MariaDB
 -- PHP-Version: 8.1.6
 
@@ -32,9 +32,8 @@ USE fortunecookies;
 --
 
 CREATE TABLE `access_records` (
-                                  `pk_entry_id` int(11) NOT NULL,
-                                  `ip` varchar(15) DEFAULT NULL,
-                                  `timestamp` date DEFAULT NULL,
+                                  `pk_ip` varchar(15) NOT NULL,
+                                  `lastAccessDate` date DEFAULT NULL,
                                   `accessCount` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -103,7 +102,7 @@ INSERT INTO `quote` (`pk_quote_id`, `text`) VALUES
 -- Indizes für die Tabelle `access_records`
 --
 ALTER TABLE `access_records`
-    ADD PRIMARY KEY (`pk_entry_id`);
+    ADD PRIMARY KEY (`pk_ip`);
 
 --
 -- Indizes für die Tabelle `quote`
@@ -114,12 +113,6 @@ ALTER TABLE `quote`
 --
 -- AUTO_INCREMENT für exportierte Tabellen
 --
-
---
--- AUTO_INCREMENT für Tabelle `access_records`
---
-ALTER TABLE `access_records`
-    MODIFY `pk_entry_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT für Tabelle `quote`
